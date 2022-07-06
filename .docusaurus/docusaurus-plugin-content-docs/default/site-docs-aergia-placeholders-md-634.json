@@ -1,0 +1,22 @@
+{
+  "unversionedId": "aergia/placeholders",
+  "id": "aergia/placeholders",
+  "title": "Placeholders",
+  "description": "This page is currently empty.",
+  "source": "@site/docs/aergia/placeholders.md",
+  "sourceDirName": "aergia",
+  "slug": "/aergia/placeholders",
+  "permalink": "/docs/aergia/placeholders",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Placeholders",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/aergia/intro"
+  }
+}

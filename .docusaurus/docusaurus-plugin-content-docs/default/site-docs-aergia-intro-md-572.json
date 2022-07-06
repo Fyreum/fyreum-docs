@@ -1,0 +1,26 @@
+{
+  "unversionedId": "aergia/intro",
+  "id": "aergia/intro",
+  "title": "Introduction",
+  "description": "Codacy Badge",
+  "source": "@site/docs/aergia/intro.md",
+  "sourceDirName": "aergia",
+  "slug": "/aergia/intro",
+  "permalink": "/docs/aergia/intro",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Introduction",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/bedrock/intro"
+  },
+  "next": {
+    "title": "Placeholders",
+    "permalink": "/docs/aergia/placeholders"
+  }
+}
