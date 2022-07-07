@@ -45,7 +45,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','037'),
+    component: ComponentCreator('/docs','8b7'),
     routes: [
       {
         path: '/docs/aergia/intro',
@@ -62,6 +62,12 @@ export default [
       {
         path: '/docs/bedrock/intro',
         component: ComponentCreator('/docs/bedrock/intro','589'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/bedrock/storagedatacontainer',
+        component: ComponentCreator('/docs/bedrock/storagedatacontainer','087'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

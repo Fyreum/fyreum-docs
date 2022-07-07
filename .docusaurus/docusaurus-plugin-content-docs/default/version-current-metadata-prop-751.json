@@ -25,6 +25,12 @@
             "label": "Introduction",
             "href": "/docs/bedrock/intro",
             "docId": "bedrock/intro"
+          },
+          {
+            "type": "link",
+            "label": "Storage System",
+            "href": "/docs/bedrock/storagedatacontainer",
+            "docId": "bedrock/storagedatacontainer"
           }
         ]
       },
@@ -67,6 +73,12 @@
       "id": "bedrock/intro",
       "title": "Introduction",
       "description": "Codacy Badge",
+      "sidebar": "tutorialSidebar"
+    },
+    "bedrock/storagedatacontainer": {
+      "id": "bedrock/storagedatacontainer",
+      "title": "Storage System",
+      "description": "Features",
       "sidebar": "tutorialSidebar"
     },
     "welcome": {

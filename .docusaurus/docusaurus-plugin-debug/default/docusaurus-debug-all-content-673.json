@@ -34,8 +34,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Introduction",
-                "permalink": "/docs/bedrock/intro"
+                "title": "Storage System",
+                "permalink": "/docs/bedrock/storagedatacontainer"
               },
               "next": {
                 "title": "Placeholders",
@@ -86,6 +86,32 @@
                 "permalink": "/docs/welcome"
               },
               "next": {
+                "title": "Storage System",
+                "permalink": "/docs/bedrock/storagedatacontainer"
+              }
+            },
+            {
+              "unversionedId": "bedrock/storagedatacontainer",
+              "id": "bedrock/storagedatacontainer",
+              "title": "Storage System",
+              "description": "Features",
+              "source": "@site/docs/bedrock/storagedatacontainer.md",
+              "sourceDirName": "bedrock",
+              "slug": "/bedrock/storagedatacontainer",
+              "permalink": "/docs/bedrock/storagedatacontainer",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Storage System",
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Introduction",
+                "permalink": "/docs/bedrock/intro"
+              },
+              "next": {
                 "title": "Introduction",
                 "permalink": "/docs/aergia/intro"
               }
@@ -128,6 +154,10 @@
                   {
                     "type": "doc",
                     "id": "bedrock/intro"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "bedrock/storagedatacontainer"
                   }
                 ]
               },

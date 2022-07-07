@@ -20,7 +20,7 @@
     "permalink": "/docs/welcome"
   },
   "next": {
-    "title": "Introduction",
-    "permalink": "/docs/aergia/intro"
+    "title": "Storage System",
+    "permalink": "/docs/bedrock/storagedatacontainer"
   }
 }

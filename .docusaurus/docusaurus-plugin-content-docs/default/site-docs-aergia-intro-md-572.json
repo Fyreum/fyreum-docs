@@ -16,8 +16,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Introduction",
-    "permalink": "/docs/bedrock/intro"
+    "title": "Storage System",
+    "permalink": "/docs/bedrock/storagedatacontainer"
   },
   "next": {
     "title": "Placeholders",

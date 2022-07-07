@@ -42,32 +42,66 @@ This library is an updated paper-only version of [DRECommons](https://github.com
 
 ### Maven
 
-```
+```xml
+<!-- Relocate Bedrock in the maven-shade-plugin configuration -->
+<artifactSet>
+    <includes>
+        <include>de.erethon:bedrock</include>
+    </includes>
+</artifactSet>
+<relocations>
+    <relocation>
+        <pattern>de.erethon.bedrock</pattern>
+        <shadedPattern>de.erethon.example.bedrock</shadedPattern>
+    </relocation>
+</relocations>
+
+<!-- Add Erethon repository -->
 <repositories>
     <repository>
-        <id>dre-repo</id>
+        <id>erethon-repo</id>
         <url>https://erethon.de/repo</url>
     </repository>
 </repositories>
 
-<dependency>
-    <groupId>de.erethon</groupId>
-    <artifactId>bedrock</artifactId>
-    <version>1.2.2</version>
-    <scope>compile</scope>
-</dependency>
+<!-- Add Bedrock dependency -->
+<dependencies>
+    <dependency>
+        <groupId>de.erethon</groupId>
+        <artifactId>bedrock</artifactId>
+        <version>1.2.2</version>
+        <scope>compile</scope>
+    </dependency>
+</dependencies>
 ```
 
 ### Gradle (Kotlin)
 
-```
+Building with Gradle requires the [Gradle Shadow](https://github.com/johnrengelman/shadow) plugin.
+
+```kotlin
+// Add the Gradle Shadow plugin
+plugins {
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+}
+
+// Add Erethon repository
 repositories {
     maven {
         url = uri("https://erethon.de/repo")
     }
 }
 
+// Add Bedrock dependency
 dependencies {
     implementation("de.erethon:bedrock:1.2.2")
+}
+
+// Relocate Bedrock inside shadowJar task
+shadowJar {
+    dependencies {
+        include(dependency("de.erethon:bedrock:1.2.2"))
+    }
+    relocate("de.erethon.bedrock", "de.erethon.example.bedrock")
 }
 ```

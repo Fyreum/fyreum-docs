@@ -43,7 +43,7 @@ export default {
       "title": "Fyreum Docs",
       "logo": {
         "alt": "Fyreum Site Logo",
-        "src": "img/logo.svg"
+        "src": "img/logo.png"
       },
       "items": [
         {
