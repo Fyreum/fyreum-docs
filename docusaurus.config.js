@@ -82,7 +82,7 @@ const config = {
             items: [
               {
                 label: 'Bedrock',
-                to: '/docs/bedrock/intro',
+                to: '/bedrock/intro',
               },
             ],
           },

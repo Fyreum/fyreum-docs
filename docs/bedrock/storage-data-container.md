@@ -18,7 +18,7 @@ The container itself requires 2 arguments in order to work:
 - `File` - A file to store the data at
 - `int` - The current config version
 
-**See the [Config Wrapper](/docs/bedrock/e-config) class for more details**
+**See the [Config Wrapper](/bedrock/e-config) class for more details**
 
 ```java
 public class ExampleStorageDataContainer extends StorageDataContainer {
@@ -245,4 +245,4 @@ Inner Maps will always be HashMaps, when deserialized. There is currently no way
 ### Custom data types
 
 Using custom data types requires the registration of a [StorageDataTranslator](https://github.com/DRE2N/Bedrock/blob/master/src/main/java/de/erethon/bedrock/config/storage/StorageDataTranslator.java).
-For the specific class type. See [next](/docs/bedrock/storage-data-translators) page.
+For the specific class type. See [next](/bedrock/storage-data-translators) page.
