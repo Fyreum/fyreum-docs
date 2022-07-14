@@ -40,6 +40,8 @@ mostly related to adventure's MiniMessage.
 
 This library is an updated paper-only version of [DRECommons](https://github.com/DRE2N/DRECommons).
 
+## Building
+
 ### Maven
 
 ```xml
@@ -60,7 +62,7 @@ This library is an updated paper-only version of [DRECommons](https://github.com
 <repositories>
     <repository>
         <id>erethon-repo</id>
-        <url>https://erethon.de/repo</url>
+        <url>https://erethon.de/repo/</url>
     </repository>
 </repositories>
 
@@ -88,7 +90,7 @@ plugins {
 // Add Erethon repository
 repositories {
     maven {
-        url = uri("https://erethon.de/repo")
+        url = uri("https://erethon.de/repo/")
     }
 }
 
