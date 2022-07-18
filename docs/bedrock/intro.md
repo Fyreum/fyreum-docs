@@ -71,7 +71,7 @@ This library is an updated paper-only version of [DRECommons](https://github.com
     <dependency>
         <groupId>de.erethon</groupId>
         <artifactId>bedrock</artifactId>
-        <version>1.2.2</version>
+        <version>1.2.3</version>
         <scope>compile</scope>
     </dependency>
 </dependencies>
@@ -96,13 +96,13 @@ repositories {
 
 // Add Bedrock dependency
 dependencies {
-    implementation("de.erethon:bedrock:1.2.2")
+    implementation("de.erethon:bedrock:1.2.3")
 }
 
 // Relocate Bedrock inside shadowJar task
 shadowJar {
     dependencies {
-        include(dependency("de.erethon:bedrock:1.2.2"))
+        include(dependency("de.erethon:bedrock:1.2.3"))
     }
     relocate("de.erethon.bedrock", "de.erethon.example.bedrock")
 }

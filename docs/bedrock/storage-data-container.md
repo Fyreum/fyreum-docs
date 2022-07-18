@@ -33,7 +33,7 @@ public class ExampleStorageDataContainer extends StorageDataContainer {
 
 Replace `path` with the actual path to the file you want to use and `file` with the name of the file.
 
-### Add data fields
+### Adding data fields
 
 You can add a data field by simply adding the [StorageData](https://github.com/DRE2N/Bedrock/blob/master/src/main/java/de/erethon/bedrock/config/storage/StorageData.java) 
 annotation above the desired class field.
@@ -45,6 +45,23 @@ private String string = "This is a String";
 
 The annotation without specifications is already enough to let the StorageDataContainer do its work.
 But in order to achieve the desired loading, storing & saving behaviour, additional arguments are necessary.
+
+### Adding additional containers
+
+You can also add additional container classes, inside a container. Additional containers are not required to extend the
+[StorageDataContainer](https://github.com/DRE2N/Bedrock/blob/master/src/main/java/de/erethon/bedrock/config/storage/StorageDataContainer.java) 
+class, as they're managed by the original container as well. Hence, those containers offer more freedom to use.
+
+```java
+@AdditionalContainer
+private YourAdditionalContainerClass additionalContainer = new YourAdditionalContainerClass();
+```
+
+:::note
+
+Adding data fields inside an additional container works exactly the same as inside actual containers.
+
+:::
 
 ## Data field options
 
@@ -185,6 +202,57 @@ Example:
 @StorageData(type = ArrayListc.class, valueTypes = Integer.class)
 private List<Integer> integerList = new ArrayList<>();
 ```
+
+## Additional container options
+
+### Custom sub-path
+
+An additional container might have set a sub-path, which gets prepended before each path inside it.
+By default, the sub-path is empty.
+
+Path scheme for the data field: `{SUBPATH}{PATH}`
+
+Example:
+
+```java
+@AdditionalContainer(subPath="additional.")
+private YourAdditionalContainerClass additionalContainer = new YourAdditionalContainerClass();
+```
+
+Inside the additional container:
+
+```java
+@StorageData(path="customPathToString")
+private String string = "A String";
+```
+
+Path of the String: `additional.customPathToString`
+
+
+There is also a special behaviour for paths inside an additional container. When set to `#`, only the `subPath` will be used,
+without adding its field name etc.
+
+Example:
+
+```java
+@AdditionalContainer(subPath = "additionalContainer")
+private YourAdditionalContainerClass additionalContainer = new YourAdditionalContainerClass();
+```
+
+Inside the additional container:
+
+```java
+@StorageData(path = "#")
+private String string = "This is a String";
+```
+
+Path of the String: `additionalContainer`
+
+:::note
+
+Paths containing `#` won't work, outside an additional container.
+
+:::
 
 ## Using complex data types
 

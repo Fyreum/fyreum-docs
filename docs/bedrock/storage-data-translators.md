@@ -85,6 +85,11 @@ There are many ways to serialize and deserialize values. This is just a basic ex
 
 :::
 
+### Error handling for deserialization
+
+Errors thrown while deserializing values will we sent into the console. Values which deserialization failed,
+will be treated as null values and will be therefore handled by the set [nullability behaviour](/bedrock/storage-data-container#nullability).
+
 ## Override default translators
 
 To override a default translator, just register a data translator for the same class type.
@@ -98,4 +103,4 @@ StorageDataTranslators.registerDataTranslator(
 );
 ```
 
-This would change 
+This would set the default value of non-integers to `-1`, and load integers normally.
