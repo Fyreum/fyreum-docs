@@ -10,18 +10,25 @@ class out of the box already has a variety of translators registered to it.
 
 ## Default translators
 
+### Java natives
+
 - `Boolean` (java.lang.Boolean)
+- `Collection` (java.util.Collection)
 - `Double` (java.lang.Double)
+- `Enum` (java.lang.Enum)
 - `Integer` (java.lang.Integer)
 - `Long` (java.lang.Long)
+- `Map` (java.util.Map)
 - `Object` (java.lang.Object)
+- `Serializable` (java.io.Serializable)
 - `Short` (java.lang.Short)
 - `String` (java.lang.String)
-- `StringIgnoreCase` (de.erethon.bedrock.misc.StringIgnoreCase)
-- `Location` (org.bukkit.Location)
 - `UUID` (java.util.UUID)
-- `Collection` (java.util.Collection)
-- `Map` (java.util.Map)
+
+### External classes
+
+- `Location` (org.bukkit.Location)
+- `StringIgnoreCase` (de.erethon.bedrock.misc.StringIgnoreCase)
 
 **See a more detailed list [here](https://github.com/DRE2N/Bedrock/blob/master/src/main/java/de/erethon/bedrock/config/storage/StorageDataTranslators.java).**
 
@@ -88,7 +95,7 @@ There are many ways to serialize and deserialize values. This is just a basic ex
 ### Error handling for deserialization
 
 Errors thrown while deserializing values will we sent into the console. Values which deserialization failed,
-will be treated as null values and will be therefore handled by the set [nullability behaviour](/bedrock/storage-data-container#nullability).
+will be treated as null values and will be therefore handled by the defined [nullability behaviour](/bedrock/storage-data-container#nullability).
 
 ## Override default translators
 
@@ -103,4 +110,4 @@ StorageDataTranslators.registerDataTranslator(
 );
 ```
 
-This would set the default value of non-integers to `-1`, and load integers normally.
+This would load integers normally, but set the default value of non-integers to `-1`.

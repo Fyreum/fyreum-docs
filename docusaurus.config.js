@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Fyreum Docs',
+  title: 'Fyreum Docs (Beta)',
   tagline: 'Official Docs for projects of Fyreum',
   url: 'https://docs.fyreum.de',
   baseUrl: '/',
